@@ -13,6 +13,8 @@ We will create a Linux and Windows virtual machine controlled by Vagrant.  If ti
 1. Administrator rights on your machine
 1. At least 25 GB of free hard drive space 
 
+Note that the workshop will work on Windows, OSx, or Linux machine as long as you can run Virtualbox on the machine.
+
 ##Software
 
 1. Virtualbox 5.x - [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
