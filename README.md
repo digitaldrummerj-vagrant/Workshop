@@ -15,17 +15,20 @@
 
 
 ##Pre-Work:
-===============
+
 Make sure that you are not behind a proxy server for this pre-work.
 
-###Installing Vagrant Boxes to Use:
+###Installing Vagrant Boxes to Use
+
 1. After install software above, open a command prompt or terminal
 1. Run the following commands
 
-    vagrant box add ubuntu/trusty64
-    vagrant box add opentable/win-2012r2-standard-amd64-nocm
-    vagrant plugin install vagrant-reload
-    (optional) vagrant plugin install vagrant-azure
+    ```cmd
+        vagrant box add ubuntu/trusty64
+        vagrant box add opentable/win-2012r2-standard-amd64-nocm
+        vagrant plugin install vagrant-reload
+        (optional) vagrant plugin install vagrant-azure
+    ```
 
 1. Verify the 2 vagrant boxes were added correctly by running:
     vagrant box list 
