@@ -1,4 +1,11 @@
-# Vagrant Workshop
+# Vagrant Workshop 
+####Fast-Track Your Development Environment Setup and Management with Vagrant
+
+##Overview
+
+Come learn how Vagrant will make it easier to manage your development environment setup and remove the "works on my machine" excuse for your team.    First, we will walk through an overview of Vagrant.  Then we will dive into creating Vagrant machines.  You will walk away with everything you need to have Vagrant manage your development environment. 
+
+We will create a Linux and Windows virtual machine controlled by Vagrant.  If time permits we will also create an Azure virtual machine that is managed by Vagrant. 
 
 
 ##Laptop/Computer Requirements
@@ -13,6 +20,9 @@
 1. Vagrant - [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html)
 1. PDF Reader - Workshop Manual will be available in PDF format
 
+##Accounts
+
+Azure account if you want to create an Azure Virtual Machine as part of the workshop.  This is totally optional.
 
 ##Pre-Work:
 
