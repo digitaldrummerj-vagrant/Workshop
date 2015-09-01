@@ -9,6 +9,7 @@ We will create a Linux and Windows virtual machine controlled by Vagrant.  If ti
 
 
 ##Laptop/Computer Requirements
+
 1. Minumum 4GB RAM, prefer at least 8GB
 1. Administrator rights on your machine
 1. At least 25 GB of free hard drive space 
@@ -20,7 +21,7 @@ Note that the workshop will work on Windows, OSx, or Linux machine as long as yo
 1. Virtualbox 5.x - [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 1. Virtualbox Extension Pack - [http://download.virtualbox.org/virtualbox/5.0.2/Oracle_VM_VirtualBox_Extension_Pack-5.0.2-102096.vbox-extpack](http://download.virtualbox.org/virtualbox/5.0.2/Oracle_VM_VirtualBox_Extension_Pack-5.0.2-102096.vbox-extpack)
 1. Vagrant - [https://www.vagrantup.com/downloads.html](https://www.vagrantup.com/downloads.html)
-1. PDF Reader - Workshop Manual will be available in PDF format
+1. Git Command Line (Windows Only) - [https://github.com/git-for-windows/git/releases/download/v2.5.1.windows.1/Git-2.5.1-64-bit.exe](https://github.com/git-for-windows/git/releases/download/v2.5.1.windows.1/Git-2.5.1-64-bit.exe)
 
 ##Accounts
 
