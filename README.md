@@ -6,7 +6,7 @@ Learn how Vagrant will make it easier to manage your development environment set
 We will create a Linux and Windows virtual machine controlled by Vagrant.  If time permits we will also create an Azure virtual machine that is managed by Vagrant. 
 
 
-**[View the Tutorial Here](tree/master/Tutorial)**
+**[View the Tutorial Here](Tutorial/)**
 
 
 Note - that the workshop will work on Windows, OSx, or Linux machine as long as you can run Virtualbox on the machine.
