@@ -1,7 +1,9 @@
 # Vagrant Hands-On Tutorial
 
+This is the tutorial for the Vagrant workshop.  It will walk you through creating a Linux and Windows vagrant machine.
+
+
 ## Hardware Requirements
-----
 
 1. Minumum 4GB RAM, prefer at least 8GB.  It will be pretty slow with only 4GM of RAM.
 1. Administrator rights on your machine
@@ -11,7 +13,6 @@ Note that the workshop will work on Windows, OSx, or Linux machine as long as yo
 
 
 ## Software Requirements
-----
 
 1. Virtualbox 5.x - [https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)
 1. Virtualbox Extension Pack - [http://download.virtualbox.org/virtualbox/5.0.2/Oracle_VM_VirtualBox_Extension_Pack-5.0.2-102096.vbox-extpack](http://download.virtualbox.org/virtualbox/5.0.2/Oracle_VM_VirtualBox_Extension_Pack-5.0.2-102096.vbox-extpack)
@@ -19,7 +20,7 @@ Note that the workshop will work on Windows, OSx, or Linux machine as long as yo
 1. Git Command Line (Windows Only and Linux) - [https://github.com/git-for-windows/git/releases/download/v2.5.1.windows.1/Git-2.5.1-64-bit.exe](https://github.com/git-for-windows/git/releases/download/v2.5.1.windows.1/Git-2.5.1-64-bit.exe)
 
 ##Pre-Work
-----
+
 
 ###Installing Virtualbox
 
@@ -36,12 +37,8 @@ Note that the workshop will work on Windows, OSx, or Linux machine as long as yo
 ###Installing Git (Windows Only)
 
 1. Download Git from [https://github.com/git-for-windows/git/releases/download/v2.5.1.windows.1/Git-2.5.1-64-bit.exe](https://github.com/git-for-windows/git/releases/download/v2.5.1.windows.1/Git-2.5.1-64-bit.exe)
-1. Run the exe installer after it downloads and keep all of the defaults except the PATH environment option. For the Path Option select the "Use Git from the Windows Command Prompt"
-
-![Git Path Image](GitPathSetup.png)
-
+1. Run the exe installer after it downloads and keep all of the defaults 
 1. After the install is completed, you need to add the Git bin path that contains the ssh client to the system path environment variable.  On my machine the sshe client was located at C:\Program Files\Git\usr\bin.  
-
 1. After you add the Git ssh client path to the system path environment variable, open a command prompt and type ssh.  
 
 ![SSH Client Verification](SshClientVerification.png)
@@ -82,7 +79,7 @@ We need to create a directory to hold all of our vagrant machine configurations.
 
 1. Create the directory c:\vagrantboxes .
 
-----
+
 ##Start of Workshop
 
 Now you are ready to proceed with the actual workshop.
