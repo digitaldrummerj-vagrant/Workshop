@@ -150,7 +150,7 @@ Scroll down to the virtualbox section that is around line 46.  It will look like
 		
 1. We also want to give a friendly name to the Virtual machine Management UI just in case you ever need to use it.
 
-     	vb.name = "Workshop - Ubuntu"
+     	vb.name = "Workshop - Linux"
 	 		
 1. Next we need to uncomment the "end" statement to tell vagrant where the virtualbox section ends.  
 		
@@ -225,7 +225,7 @@ There are several other commands that you will want to know.  Below is a list of
 * Reboot: vagrant reload
 * Hibernate: vagrant suspend 
  * Status: vagrant status
- * Global status: vagrant???
+ * Global status: vagrant global-status
  * Shutdown: vagrant halt
  * Delete machine but keep Vagrantfile: vagrant destroy
   
@@ -237,7 +237,7 @@ Go ahead and shutdown the Linux machine and move onto to the Windows portion of 
 
 ## Windows Vagrant Machine
 
-This section will walk you through creating a Windows vagrant box based on the opentable/??? base box.
+This section will walk you through creating a Windows vagrant box based on the opentable/win-2012r2-standard-amd64-nocm base box.
 
 1. Open a command prompt
 1. Navigate to c:\vagrantboxes
@@ -284,7 +284,7 @@ As well the default communication method for vagrant to the virtual machine is s
 
 We need to tell vagrant that we are going to use virtualbox for this machine.
 
-Scroll down to the virtualbox section that is around line 46.  It will look like this
+Scroll down to the virtualbox section that is around line 48.  It will look like this
 
 		# config.vm.provider "virtualbox" do |vb|
 		#   # Display the VirtualBox GUI when booting the machine
@@ -337,7 +337,7 @@ Now lets create out shell script we are going to run.
 1. In the c:\vagrantboxes\windows directory create a text file named main.cmd
 1. Open the main.cmd file and add the following lines:
 
-		@powershell -NoProfile -ExecutionPolicy Bypass -File "%systemdrive%\vagrant\shell\InstallChocolatey.ps1"
+		@powershell -NoProfile -ExecutionPolicy Bypass -File "%systemdrive%\vagrant\InstallChocolatey.ps1"
 		
 1. Save the main.cmd file
 
@@ -369,29 +369,38 @@ In the command prompt that still have opened to the c:\vagrantboxes\windows dire
 	
 You will  see a bunch of messages in the command prompt such as this screenshot:
 
-????
-![Vagrant Up Messages](VagrantUpLinux.png)
 
-Now the machine is created, booted up in headless mode (no GUI), had git installed and it ready to be logged into to through ssh.
+![Vagrant Up Messages](VagrantUpWindows.png)
 
-### Logging into the windows Machine
+Now the machine is created, booted up, had chocolatey installed and you can interact with it using the Virtualbox GUI.  
 
-
-For the Windows machine we are using the Virtualbox GUI but you could have also run the machine as headless by turning off the Virtualbox GUI and accessing it through remote desktop (rdp)
-
-In the command prompt that you still have open to the windows directory, run the following command:
-
-		vagrant rdp 
-
-???		
-![Vagrant Ssh Output](VagrantSsh.png)
-		
-You are now logged into the vagrant windows machine and can interact with it.  
+Note that if we had forwarded the RDP port, we could use the vagrant rdp command to login to the machine and run it without the Virtualbox GUI.
 
 ## Packaging A Machine
 
+If you get a machine just like you want it and want to share it the easiest thing to do is run the Vagrant package command.
 
+[https://docs.vagrantup.com/v2/cli/package.html](https://docs.vagrantup.com/v2/cli/package.html)
+
+###Workshop Linux Box Packaging
+
+To package the linux machine, open a command prompt and navigate to c:\vagrantboxes\linux and run the following command:
+
+	vagrant package --output "Workshop-Linux.box" 
  		 
+This command creates a file called Workshop-Linux.box that you can now use as a base box and add into vagrant with the vagrant box add command.
+
+###Workshop Windows Box Packaging
+
+To package the windows machine, open a command prompt and navigate to c:\vagrantboxes\windows and run the following command:
+
+	vagrant package --output "Workshop-Windows.box" 
+ 		 
+This command creates a file called Workshop-Windows.box that you can now use as a base box and add into vagrant with the vagrant box add command.
+
+
 ##Behind a Firewall?
 
-If you are behind a firewall, you need to do a little bit of additional configuration to get all of the proxy settings configured.  I have an article on my blog that has the isntructiosn at [http://digitaldrummerj.me/vagrant-behind-proxy-server/](http://digitaldrummerj.me/vagrant-behind-proxy-server/) 
+If you are behind a firewall, you need to do a little bit of additional configuration to get all of the proxy settings configured.  I have an article on my blog that has the isntructiosn at [http://digitaldrummerj.me/vagrant-behind-proxy-server/](http://digitaldrummerj.me/vagrant-behind-proxy-server/)
+
+Note:  Don't use the vagrant-proxyconf vagrant plugin with Vagrant 1.7.4.  This plugin now errors trying to set the proxy.  Instead create a shell script to call the SETX command line and run it as a shell script provision. 
